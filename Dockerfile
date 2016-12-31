@@ -16,7 +16,6 @@ rm -rf /var/www/html/moodle && \
 chown -R apache:apache /var/www/html && \
 chmod -R 755 /var/www/html
 
-
 # - Clean YUM caches to minimise Docker image size...
 RUN \
   yum clean all && rm -rf /tmp/yum*
