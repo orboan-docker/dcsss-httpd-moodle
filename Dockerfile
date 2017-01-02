@@ -28,4 +28,7 @@ ENV MYSQL_PASSWORD=iaw
 ENV MOODLE_URL=http://vle.iaw.io
 ENV MOODLE_DATADIR=/var/www/moodledata
 
+ENV USER=www
+ENV PASSWORD=iaw
+
 ADD container-files /

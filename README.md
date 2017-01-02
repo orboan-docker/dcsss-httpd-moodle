@@ -9,7 +9,7 @@ It is inspired by [million12/centos-supervisor](https://registry.hub.docker.com/
 
 ## Docker run example:
 
-#### docker run --link mysql:mysql -p 80:80 -p 2222:22 -p 9001:9001 -e SHELLINABOX_PORT=9103 -p 9103:4200 -d -e MYSQL_HOST=mysql -e MYSQL_DATABASE=moodle -e MYSQL_USER=vle_user -e MYSQL_PASSWORD=iaw -e MOODLE_URL=http://mydomain.com orboan/dcsss-httpd-moodle
+#### docker run --link mysql:mysql -p 80:80 -p 2222:22 -p 9001:9001 -e USER=myusername -e PASSWORD=mypassword -e SHELLINABOX_PORT=9103 -p 9103:4200 -d -e MYSQL_HOST=mysql -e MYSQL_DATABASE=moodle -e MYSQL_USER=vle_user -e MYSQL_PASSWORD=iaw -e MOODLE_URL=http://mydomain.com orboan/dcsss-httpd-moodle
 
 8000:80 maps the httpd server (apache2)
 2222:22 maps the sshd server
@@ -30,7 +30,7 @@ username: www
 
 password: iaw
 
-You can change them in container-files/config/init/create_user.sh
+ou can change them using USER and PASSWORD environment variables (see example above).
 
 ## Supervisor management via web interface
 
@@ -89,8 +89,7 @@ username: www
 
 password: iaw
 
-You can change them in container-files/config/init/create_user.sh
-
+ou can change them using USER and PASSWORD environment variables.
 
 ## Usage
 
